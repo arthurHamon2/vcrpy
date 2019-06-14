@@ -2,6 +2,8 @@
 .tox
 .cache
 .pytest_cache/
+.idea/
+.python-version
 build/
 dist/
 *.egg/
