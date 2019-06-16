@@ -12,25 +12,17 @@ env:
   matrix:
     - DEPENDENCY="boto"
     - DEPENDENCY="aiohttp"
-    - DEPENDENCY="requests"
-    - DEPENDENCY="httplib"
-    - DEPENDENCY="urllib"
-    - DEPENDENCY="tornado"
+    - DEPENDENCY="others"
+    - DEPENDENCY="flask"
 
 python:
-  - "2.7"
-  - "3.5"
-  - "3.6"
-  - "pypy"
-  - "pypy3.5-5.9.0"
+  - "3.7"
 
 matrix:
   allow_failures:
     - env: DEPENDENCY="boto"
-    - python: "pypy3.5-5.9.0"
-      env: DEPENDENCY="aiohttp"
 
 install:
   - pip install tox-travis
 script:
-  - tox
+  - tox -p auto
