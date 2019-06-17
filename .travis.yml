@@ -26,6 +26,7 @@ matrix:
     - env: DEPENDENCY="boto"
 
 install:
-  - pip install tox-travis
+  - python -m pip install -e git+https://github.com/tox-dev/tox.git@3.12.1#egg=tox
 script:
-  - tox
+  - export TOX_PARALLEL_NO_SPINNER=1
+  - python -m tox -p auto
