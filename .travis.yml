@@ -13,7 +13,6 @@ env:
     - DEPENDENCY="boto"
     - DEPENDENCY="aiohttp"
     - DEPENDENCY="others"
-    - DEPENDENCY="flask"
 
 python:
   - "2.7"
