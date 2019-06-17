@@ -11,7 +11,6 @@ env:
     - secure: LBSEg/gMj4u4Hrpo3zs6Y/1mTpd2RtcN49mZIFgTdbJ9IhpiNPqcEt647Lz94F9Eses2x2WbNuKqZKZZReY7QLbEzU1m0nN5jlaKrjcG5NR5clNABfFFyhgc0jBikyS4abAG8jc2efeaTrFuQwdoF4sE8YiVrkiVj2X5Xoi6sBk=
   matrix:
     - DEPENDENCY="boto"
-    - DEPENDENCY="aiohttp"
     - DEPENDENCY="others"
 
 python:
@@ -25,8 +24,6 @@ python:
 matrix:
   allow_failures:
     - env: DEPENDENCY="boto"
-    - python: "pypy3"
-      env: DEPENDENCY="aiohttp"
 
 install:
   - pip install tox-travis
